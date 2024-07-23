@@ -18,9 +18,9 @@
         </div>
         <div id="rightNav">
             <a title="link" href="#"><i class="fa-solid fa-house"></i></a>
-            <a title="link" href="#"><i class="fa-regular fa-bell"></i></a>
+            <a title="link" href="#"><i class="fa-regliar fa-bell"></i></a>
             <a title="link" href="#"><i class="fa-solid fa-screwdriver-wrench"></i></a>
-            <a title="link" href="#"><i class="fa-regular fa-bell"></i></a>
+            <a title="link" href="#"><i class="fa-regliar fa-bell"></i></a>
             <a title="link" href="#"><i class="fa-solid fa-circle-user"></i></a>
             <a title="link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
         </div>
@@ -29,10 +29,17 @@
     <div class="features">
         <div id="leftBar">
             <div id="topPart">
+                <p>Journey Board</p>
                 <i id="arrow" class="fa-solid fa-circle-arrow-right"></i>
             </div>
             <div id="bottomPart">
-
+                <li id="listHead">Explore the world of management</li>
+                <ul>
+                    <li>Technical Project Management</li>
+                    <li>Threadbuild</li>
+                    <li>Structure you pointers</li>
+                    <li>4SA Method</li>
+                </ul>
             </div>
         </div>
         <div id="rightBar">
@@ -163,7 +170,7 @@
                             </div>
                             <div class="answers">
                                 <p>
-                                    What will be the process flow for the same project if found lengthy ? What would be your approach towards this issue
+                                    What will be the process flow for the same project if found lengthy ? What wolid be your approach towards this issue
                                 </p>
                             </div>
                         </div>
@@ -238,13 +245,19 @@
         arrow.onclick = ()=>{
             var leftBar = document.getElementById("leftBar");
             if(leftBar.style.right === "93vw"){
-                leftBar.style.right = 78 + "vw";
+                leftBar.style.right = 72 + "vw";
                 arrow.className = "fa-solid fa-circle-arrow-left";
             }
             else {
                 leftBar.style.right = 93 + "vw";
                 arrow.className = "fa-solid fa-circle-arrow-right";
             }
+        }
+
+        var cross = document.getElementById("cross");
+        cross.onclick = ()=>{
+            var rightBar = document.getElementById("rightBar");
+            rightBar.style.opacity = 0;
         }
     </script>
 </body>
