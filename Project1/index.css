@@ -30,6 +30,9 @@ textarea{
     border-radius: 10px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    padding-top: 10px;
+    font-family: poppins;
+    padding-left: 15px;
     box-shadow: 1px 1px 5px gainsboro;
     border: gainsboro 1px solid;
 }
