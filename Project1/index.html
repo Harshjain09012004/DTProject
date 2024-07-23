@@ -29,7 +29,7 @@
     <div class="features">
         <div id="leftBar">
             <div id="topPart">
-                <i id="arrow" class="fa-solid fa-circle-arrow-right" onclick={open}></i>
+                <i id="arrow" class="fa-solid fa-circle-arrow-right"></i>
             </div>
             <div id="bottomPart">
 
@@ -234,8 +234,17 @@
     </div>
     <script src="https://kit.fontawesome.com/46ca31bb70.js" crossorigin="anonymous"></script>
     <script>
-        function open(x){
-            console.log(x);
+        var arrow = document.getElementById("arrow")
+        arrow.onclick = ()=>{
+            var leftBar = document.getElementById("leftBar");
+            if(leftBar.style.right === "93vw"){
+                leftBar.style.right = 78 + "vw";
+                arrow.className = "fa-solid fa-circle-arrow-left";
+            }
+            else {
+                leftBar.style.right = 93 + "vw";
+                arrow.className = "fa-solid fa-circle-arrow-right";
+            }
         }
     </script>
 </body>
