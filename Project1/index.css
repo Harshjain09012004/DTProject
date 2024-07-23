@@ -14,6 +14,15 @@ iframe{
     background: grey;
 
 }
+input{
+    border-radius: 5px;
+    border: grey 1px solid;
+}
+select {
+    border-radius: 5px;
+    font-family: poppins;
+    border: grey 1px solid;
+}
 nav{
     background:#F0F0F0;
     height: 50px;
@@ -150,8 +159,8 @@ i{
     justify-content: space-around;
 }
 .cards{
-    border: gray 1px solid;
-    box-shadow:1px 1px 5px gray;
+    border: gainsboro 1px solid;
+    box-shadow:1px 1px 5px gainsboro;
     width: 450px;
     height: 460px;
     box-sizing: border-box;
@@ -166,4 +175,31 @@ i{
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     text-align: center;
+}
+#textEditor{
+    display: flex;
+    border: gainsboro 2px solid;
+    border-radius: 13px;
+    box-shadow: 1px 1px 2px gainsboro;
+    margin: 18px;
+}
+#first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: gainsboro 2px solid;
+    border-radius: 11px;
+    height: 90px
+}
+#firstTop{
+    display: flex;
+    gap: 12px;
+}
+#firstTopsecond{
+    display: flex;
+    gap: 35px;
+}
+#second{
+    height: 240px;
 }
