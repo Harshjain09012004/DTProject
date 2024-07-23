@@ -32,12 +32,12 @@
                 <i id="arrow" class="fa-solid fa-circle-arrow-right"></i>
             </div>
             <div id="bottomPart">
-                <li id="listHead">Explore the world of management</li>
+                <li id="listHead"></li>
                 <ul>
-                    <li>Technical Project Management</li>
-                    <li>Threadbuild</li>
-                    <li>Structure you pointers</li>
-                    <li>4SA Method</li>
+                    <li class="lists"></li>
+                    <li class="lists"></li>
+                    <li class="lists"></li>
+                    <li class="lists"></li>
                 </ul>
             </div>
         </div>
@@ -292,8 +292,12 @@
                 }
             ]
         }
+        
         var title = document.getElementById("titleHead");
         title.append(data.task_head);
+
+        var listHead = document.getElementById("listHead");
+        listHead.append(data.task_head);
 
         var title = document.getElementById("taglineHead");
         title.append(data.task_title);
@@ -302,13 +306,16 @@
         title.append(data.task_description);
 
         var cards = document.getElementsByClassName("cards")
-        
+        var leftBarlists = Array.from(document.getElementsByClassName("lists"));
+
+        console.log(leftBarlists)
         var i = 0;
         Array.from(cards).forEach(element => {
             var tit = element.getElementsByClassName("cardNamesText");
             var des = element.getElementsByClassName("descriptionText");
             tit[0].append(data.assets[i].asset_title);
-            des[0].append("Description :" + data.assets[i].asset_description);
+            des[0].append("Description : " + data.assets[i].asset_description);
+            leftBarlists[i].append(data.assets[i].asset_title);
             i = i+1;
         });
     </script>
