@@ -100,12 +100,13 @@ i{
     flex-direction: column;
     color: black;
     padding: 15px;
-    box-sizing: border-box;
     width: 100%;
     border-radius: 5px;
-    line-height: 0px;
+    line-height: 20px;
     background: #E9ECEF;
-
+}
+#tagline h4{
+    line-height: 0px;
 }
 #leftBar{
     height: 88vh;
