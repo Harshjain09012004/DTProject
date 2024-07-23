@@ -203,3 +203,10 @@ i{
 #second{
     height: 240px;
 }
+.question{
+    display: flex;
+    background: #F0F0F0;
+    align-items: center;
+    gap: 25px;
+    padding-left: 10px;
+}
