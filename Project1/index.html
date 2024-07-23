@@ -79,23 +79,19 @@
             <div class="cardsSection">
                 <div class="cards" id="youtube">
                     <div class="cardNames">
-                        <p>Threads</p>
+                        <p class="cardNamesText"></p>
                     </div>
                     <div class="description">
-                        <p>
-                            Description : Answer the below question as per given data and conditions
-                        </p>
+                        <p class="descriptionText"></p>
                     </div>
                     <iframe width="450px" height="250px" title="Interview" src="https://youtube.com/embed/jATRPQdgR9Y?si=7KfJtFrt3cRN0GuO" frameborder="0" alt="Youtube Video"></iframe>
                 </div>
                 <div class="cards">
                     <div class="cardNames">
-                        <p>Threads</p>
+                        <p class="cardNamesText"></p>
                     </div>
                     <div class="description">
-                        <p>
-                            Description : Answer the below question as per given data
-                        </p>
+                        <p class="descriptionText"></p>
                     </div>
                     <div id="texts">
                         <label for="titles">Title</label>
@@ -136,7 +132,7 @@
                 </div>
                 <div class="cards">
                     <div class="cardNames">
-                        <p>Threads</p>
+                        <p class="cardNamesText"></p>
                     </div>
                     <div class="description">
                         <div class="Qna">
@@ -145,9 +141,7 @@
                                 <p>Introduction</p>
                             </div>
                             <div class="answers">
-                                <p>
-                                    The 4SA Method, How to bring a idea into process ? What will be the key steps included int the process
-                                </p>
+                                <p class="descriptionText"></p>
                             </div>
                         </div>
                         <div class="Qna">
@@ -176,12 +170,10 @@
                 </div>
                 <div class="cards">
                     <div class="cardNames">
-                        <p>Threads</p>
+                        <p class="cardNamesText"></p>
                     </div>
                     <div class="description">
-                        <p>
-                            Description : Answer the below question as per given data and conditions
-                        </p>
+                        <p class="descriptionText"></p>
                         <div class="question">
                             <i class="fa-solid fa-chevron-up"></i>
                             <p>Introduction</p>
@@ -239,9 +231,10 @@
     </div>
     <script src="https://kit.fontawesome.com/46ca31bb70.js" crossorigin="anonymous"></script>
     <script>
-        var arrow = document.getElementById("arrow")
+        var arrow = document.getElementById("arrow");
+        var leftBar = document.getElementById("leftBar");
         arrow.onclick = ()=>{
-            var leftBar = document.getElementById("leftBar");
+            
             if(leftBar.style.right === "93vw"){
                 leftBar.style.right = 72 + "vw";
                 arrow.className = "fa-solid fa-circle-arrow-left";
@@ -253,8 +246,8 @@
         }
 
         var cross = document.getElementById("cross");
+        var rightBar = document.getElementById("rightBar");
         cross.onclick = ()=>{
-            var rightBar = document.getElementById("rightBar");
             rightBar.style.opacity = 0;
         }
 
@@ -307,6 +300,17 @@
         
         var title = document.getElementById("taglinePara");
         title.append(data.task_description);
+
+        var cards = document.getElementsByClassName("cards")
+        
+        var i = 0;
+        Array.from(cards).forEach(element => {
+            var tit = element.getElementsByClassName("cardNamesText");
+            var des = element.getElementsByClassName("descriptionText");
+            tit[0].append(data.assets[i].asset_title);
+            des[0].append("Description :" + data.assets[i].asset_description);
+            i = i+1;
+        });
     </script>
 </body>
 </html>
